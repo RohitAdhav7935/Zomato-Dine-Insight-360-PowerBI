@@ -2,7 +2,7 @@
 
 An interactive Power BI dashboard analyzing 9,551 restaurants across 15 countries and 141 cities.
 
-![Home page](Zomato-Dine-Insight-360-PowerBI/screenshots/home.png)
+
 
 ## 📌 Objective
 Understand restaurant distribution, ratings, pricing, table booking and online delivery trends.
