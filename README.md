@@ -29,7 +29,7 @@ Understand restaurant distribution, ratings, pricing, table booking and online d
 3. Use the slicers to explore
 
 ## 📊 Data Source
-[Name of dataset / source link]. Used for learning and portfolio purposes only.
+[Data](https://github.com/RohitAdhav7935/Zomato-Dine-Insight-360-PowerBI/tree/main/Zomato-Dine-Insight-360-PowerBI/data). Used for learning and portfolio purposes only.
 
 ## 👤 Author
 **Rohit Adhav** · [LinkedIn](https://linkedin.com/in/rohitradhav)
