@@ -1,0 +1,47 @@
+# DAX Measures: Zomato Dine Insight 360
+
+## KPI Measures
+
+**Total Restaurants**
+Restaurants = DISTINCTCOUNT(Restaurants[Restaurant ID])
+
+**Countries**
+Countries = DISTINCTCOUNT(Restaurants[Country])
+
+**Cities**
+Cities = DISTINCTCOUNT(Restaurants[City])
+
+**Average Rating**
+Avg Rating = AVERAGE(Restaurants[Aggregate Rating])
+
+**Table Booking %**
+Table Booking % =
+DIVIDE(
+    CALCULATE(COUNTROWS(Restaurants), Restaurants[Has Table Booking] = "Yes"),
+    COUNTROWS(Restaurants)
+)
+
+**Online Deliveries %**
+Online Deliveries % =
+DIVIDE(
+    CALCULATE(COUNTROWS(Restaurants), Restaurants[Has Online Delivery] = "Yes"),
+    COUNTROWS(Restaurants)
+)
+
+## Custom Columns
+
+**Rating Group** (used in "Restaurants by rating")
+Rating Group = ROUND(Restaurants[Aggregate Rating], 0)
+
+**Price Bucket** (used in "Price buckets (avg cost for two, USD)")
+Price Bucket =
+SWITCH(
+    TRUE(),
+    Restaurants[Cost USD] <= 5, "$0-5",
+    Restaurants[Cost USD] <= 10, "$5-10",
+    Restaurants[Cost USD] <= 15, "$10-15",
+    Restaurants[Cost USD] <= 20, "$15-20",
+    Restaurants[Cost USD] <= 30, "$20-30",
+    Restaurants[Cost USD] <= 50, "$30-50",
+    "$50+"
+)
